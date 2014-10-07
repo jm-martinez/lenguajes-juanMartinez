@@ -3,33 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package com.capitulo2.encapsulamiento;
 
 /**
  *
- * @author campitos
+ * @author T
  */
 public class Usuario {
+    private int id;
     private String nombre;
-    private float sueloBase;
-    private int horasTrabajadas;
+    private String email;
 
-    public Usuario() {
-    }
-    
-
-    public Usuario(String nombre, float sueloBase, int horasTrabajadas) {
-        this.nombre = nombre;
-        this.sueloBase = sueloBase;
-        this.horasTrabajadas = horasTrabajadas;
+    public int getId() {
+        return id;
     }
 
-    public int getHorasTrabajadas() {
-        return horasTrabajadas;
-    }
-
-    public void setHorasTrabajadas(int horasTrabajadas) {
-        this.horasTrabajadas = horasTrabajadas;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -40,12 +31,13 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public float getSueloBase() {
-        return sueloBase;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSueloBase(float sueloBase) {
-        this.sueloBase = sueloBase;
+    public void setEmail(String email) {
+        this.email = email;
     }
+    
     
 }
