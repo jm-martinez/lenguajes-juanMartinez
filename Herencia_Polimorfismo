@@ -1,0 +1,87 @@
+CLASE MAIN:
+package com.superficie;
+
+/**
+ *
+ * @author T
+ */
+public class ProbarAreas {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Primero creamos el cuadrado
+        Cuadrado d = new Cuadrado();
+                 d.setLado(5);
+        //El siguiente objeto es el area
+        Area a = new Area(d);//Se escribe "d" dentro del contructor ya que se quiere
+                             //calcular el area del objeto d, no de c.
+             System.out.println(a.cacular());
+    }    
+}
+
+CLASE CUADRADO:
+package com.superficie;
+
+/**
+ *
+ * @author T
+ */
+public class Cuadrado {
+    private int lado;
+
+    public Cuadrado() {
+    }
+
+VENTANA SUPERFICIE:
+ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        Cuadrado d = new Cuadrado();
+                 d.setLado(Integer.parseInt(  objetoTexto.getText()  ));
+        //El siguiente objeto es el area
+        Area a = new Area(d);//Se escribe "d" dentro del contructor ya que se quiere
+                             //calcular el area del objeto d, no de c.
+             objetoResultado.setText("Resutado:"+a.cacular());
+    }                                        
+
+
+    public Cuadrado(int lado) {
+        this.lado = lado;
+    }
+
+    public int getLado() {
+        return lado;
+    }
+
+    public void setLado(int lado) {
+        this.lado = lado;
+    }
+}
+
+CLASE AREA:
+package com.superficie;
+
+/**
+ *
+ * @author T
+ */
+public class Area {
+    private Cuadrado c;
+
+    public Area(Cuadrado c) {
+        this.c = c;
+    }
+
+    public Cuadrado getC() {
+        return c;
+    }
+
+    public void setC(Cuadrado c) {
+        this.c = c;
+    }
+    
+    public int cacular(){
+        int area=c.getLado()*c.getLado();
+        return area;
+    }
+}
